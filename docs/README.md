@@ -1,7 +1,7 @@
 ﻿# <img src="https://github.com/kitpymes/template-netcore-entities/raw/master/docs/images/logo.png" height="30px"> Kitpymes.Core.Entities
 
 **Entidades base y de sesión, ValueObjects, Shadow Properties y Enumeraciones estaticas**
-
+ 
 [![Build Status](https://github.com/kitpymes/template-netcore-entities/workflows/Kitpymes.Core.Entities/badge.svg)](https://github.com/kitpymes/template-netcore-entities/actions)
 [![NuGet Status](https://img.shields.io/nuget/v/Kitpymes.Core.Entities)](https://www.nuget.org/packages/Kitpymes.Core.Entities/)
 [![NuGet Download](https://img.shields.io/nuget/dt/Kitpymes.Core.Entities)](https://www.nuget.org/stats/packages/Kitpymes.Core.Entities?groupby=Version)
