@@ -11,7 +11,7 @@
 
 ## 📋 Requerimientos 
 
-* Visual Studio >= 2019 (v16.3)
+* Visual Studio >= 2019 (v16.3) 
 
 * NET TargetFramework >= netcoreapp3.0
 
