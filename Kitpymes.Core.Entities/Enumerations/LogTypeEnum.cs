@@ -44,27 +44,32 @@ namespace Kitpymes.Core.Entities
     public class LogTypeEnum : EnumerationBaseInt<LogTypeEnum>
     {
         /// <summary>
-        /// No hubo cambios.
+        /// Sin cambios.
+        /// <para><strong>None</strong> = 1.</para>
         /// </summary>
         public static readonly LogTypeEnum None = new LogTypeEnum(1, nameof(None));
 
         /// <summary>
         /// Creación.
+        /// <para><strong>Created</strong> = 2.</para>
         /// </summary>
         public static readonly LogTypeEnum Created = new LogTypeEnum(2, nameof(Created));
 
         /// <summary>
         /// Actualización.
+        /// <para><strong>Updated</strong> = 3.</para>
         /// </summary>
         public static readonly LogTypeEnum Updated = new LogTypeEnum(3, nameof(Updated));
 
         /// <summary>
         /// Eliminación.
+        /// <para><strong>Deleted</strong> = 4.</para>
         /// </summary>
         public static readonly LogTypeEnum Deleted = new LogTypeEnum(4, nameof(Deleted));
 
         /// <summary>
         /// Cambio de estado.
+        /// <para><strong>Changed</strong> = 5.</para>
         /// </summary>
         public static readonly LogTypeEnum Changed = new LogTypeEnum(5, nameof(Changed));
 
@@ -73,7 +78,13 @@ namespace Kitpymes.Core.Entities
         /// </summary>
         /// <param name="value">Valor de log.</param>
         /// <param name="name">Nombre del log.</param>
-        private LogTypeEnum(int value, string name)
-            : base(value, name) { }
+        public LogTypeEnum(int value, string name)
+            : base(value, name)
+        {
+            if (Shared.Util.Check.IsRange(1, 5).HasErrors)
+            {
+                Shared.Util.Check.Throw($"El id {value} ya existe.");
+            }
+        }
     }
 }

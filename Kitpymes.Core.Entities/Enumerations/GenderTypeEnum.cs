@@ -33,11 +33,13 @@ namespace Kitpymes.Core.Entities
     {
         /// <summary>
         /// Sexo masculino.
+        /// <para><strong>Male</strong> = 1.</para>
         /// </summary>
         public static readonly GenderTypeEnum Male = new GenderTypeEnum(1, nameof(Male), "M");
 
         /// <summary>
         /// Sexo femenino.
+        /// <para><strong>Female</strong> = 2.</para>
         /// </summary>
         public static readonly GenderTypeEnum Female = new GenderTypeEnum(2, nameof(Female), "F");
 
@@ -47,8 +49,14 @@ namespace Kitpymes.Core.Entities
         /// <param name="value">Valor del tipo de sexo.</param>
         /// <param name="name">Nombre del sexo.</param>
         /// <param name="shortName">Nombre corto del sexo.</param>
-        private GenderTypeEnum(int value, string name, string shortName)
-            : base(value, name, shortName) { }
+        public GenderTypeEnum(int value, string name, string shortName)
+            : base(value, name, shortName)
+        {
+            if (Shared.Util.Check.IsRange(1, 2).HasErrors)
+            {
+                Shared.Util.Check.Throw($"El id {value} ya existe.");
+            }
+        }
 
         /// <summary>
         /// Obtiene un valor que indica si el sexo es masculino.

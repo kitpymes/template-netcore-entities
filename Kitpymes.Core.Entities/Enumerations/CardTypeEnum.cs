@@ -37,16 +37,19 @@ namespace Kitpymes.Core.Entities
     {
         /// <summary>
         /// Tarjeta American Express.
+        /// <para><strong>Amex</strong> = 1.</para>
         /// </summary>
         public static readonly CardTypeEnum Amex = new CardTypeEnum(1, "American Express", nameof(Amex));
 
         /// <summary>
         /// Tarjeta American Visa.
+        /// <para><strong>Visa</strong> = 2.</para>
         /// </summary>
         public static readonly CardTypeEnum Visa = new CardTypeEnum(2, nameof(Visa), nameof(Visa));
 
         /// <summary>
         /// Tarjeta Master Card.
+        /// <para><strong>MasterCard</strong> = 3.</para>
         /// </summary>
         public static readonly CardTypeEnum MasterCard = new CardTypeEnum(3, "Master Card", nameof(MasterCard));
 
@@ -56,8 +59,14 @@ namespace Kitpymes.Core.Entities
         /// <param name="value">Valor de la tarjeta.</param>
         /// <param name="name">Nombre de la tarjeta.</param>
         /// <param name="shortName">Nombre corto de la tarjeta.</param>
-        private CardTypeEnum(int value, string name, string shortName)
-            : base(value, name, shortName) { }
+        public CardTypeEnum(int value, string name, string shortName)
+            : base(value, name, shortName)
+        {
+            if (Shared.Util.Check.IsRange(1, 3).HasErrors)
+            {
+                Shared.Util.Check.Throw($"El id {value} ya existe.");
+            }
+        }
 
         /// <summary>
         /// Obtiene un valor que indica si la tarjeta es american express.

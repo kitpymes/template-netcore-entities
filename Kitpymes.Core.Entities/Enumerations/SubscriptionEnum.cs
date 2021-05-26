@@ -37,16 +37,19 @@ namespace Kitpymes.Core.Entities
     {
         /// <summary>
         /// Subscripción gratis.
+        /// <para><strong>Free</strong> = 1.</para>
         /// </summary>
         public static readonly SubscriptionEnum Free = new SubscriptionEnum(1, nameof(Free));
 
         /// <summary>
         /// Subscripción plata.
+        /// <para><strong>Silver</strong> = 2.</para>
         /// </summary>
         public static readonly SubscriptionEnum Silver = new SubscriptionEnum(2, nameof(Silver));
 
         /// <summary>
         /// Subscripción oro.
+        /// <para><strong>Gold</strong> = 3.</para>
         /// </summary>
         public static readonly SubscriptionEnum Gold = new SubscriptionEnum(3, nameof(Gold));
 
@@ -55,8 +58,14 @@ namespace Kitpymes.Core.Entities
         /// </summary>
         /// <param name="value">Valor de la subscripción.</param>
         /// <param name="name">Nombre de la subscripción.</param>
-        private SubscriptionEnum(int value, string name)
-            : base(value, name) { }
+        public SubscriptionEnum(int value, string name)
+            : base(value, name)
+        {
+            if (Shared.Util.Check.IsRange(1, 3).HasErrors)
+            {
+                Shared.Util.Check.Throw($"El id {value} ya existe.");
+            }
+        }
 
         /// <summary>
         /// Obtiene un valor que indica si la subscripción es gratis.

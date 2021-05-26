@@ -1,3 +1,6 @@
+# v.1.0.2
+- Se actualizan las enumeraciones.
+
 # v.1.0.1
 - Se actualiza la versión de la líbreria Kitpymes.Core.Shared a la versión 1.0.7.
 

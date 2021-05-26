@@ -35,11 +35,13 @@ namespace Kitpymes.Core.Entities
     {
         /// <summary>
         /// Estado inactivo.
+        /// <para><strong>Inactive</strong> = 0.</para>
         /// </summary>
         public static readonly StatusEnum Inactive = new StatusEnum(0, nameof(Inactive));
 
         /// <summary>
         /// Estado activo.
+        /// <para><strong>Active</strong> = 1.</para>
         /// </summary>
         public static readonly StatusEnum Active = new StatusEnum(1, nameof(Active));
 
@@ -48,8 +50,14 @@ namespace Kitpymes.Core.Entities
         /// </summary>
         /// <param name="value">Valor del estado.</param>
         /// <param name="name">Nombre del estado.</param>
-        private StatusEnum(int value, string name)
-            : base(value, name) { }
+        public StatusEnum(int value, string name)
+            : base(value, name)
+        {
+            if (Shared.Util.Check.IsRange(0, 1).HasErrors)
+            {
+                Shared.Util.Check.Throw($"El id {value} ya existe.");
+            }
+        }
 
         /// <summary>
         /// Obtiene un valor que indica si el estado es activo.
