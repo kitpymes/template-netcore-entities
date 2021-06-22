@@ -53,25 +53,25 @@ namespace Kitpymes.Core.Entities
         /// Creación.
         /// <para><strong>Created</strong> = 2.</para>
         /// </summary>
-        public static readonly LogTypeEnum Created = new LogTypeEnum(2, nameof(Created));
+        public static readonly LogTypeEnum Created = new (2, nameof(Created));
 
         /// <summary>
         /// Actualización.
         /// <para><strong>Updated</strong> = 3.</para>
         /// </summary>
-        public static readonly LogTypeEnum Updated = new LogTypeEnum(3, nameof(Updated));
+        public static readonly LogTypeEnum Updated = new (3, nameof(Updated));
 
         /// <summary>
         /// Eliminación.
         /// <para><strong>Deleted</strong> = 4.</para>
         /// </summary>
-        public static readonly LogTypeEnum Deleted = new LogTypeEnum(4, nameof(Deleted));
+        public static readonly LogTypeEnum Deleted = new (4, nameof(Deleted));
 
         /// <summary>
         /// Cambio de estado.
         /// <para><strong>Changed</strong> = 5.</para>
         /// </summary>
-        public static readonly LogTypeEnum Changed = new LogTypeEnum(5, nameof(Changed));
+        public static readonly LogTypeEnum Changed = new (5, nameof(Changed));
 
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="LogTypeEnum"/>.

@@ -39,19 +39,19 @@ namespace Kitpymes.Core.Entities
         /// Tarjeta American Express.
         /// <para><strong>Amex</strong> = 1.</para>
         /// </summary>
-        public static readonly CardTypeEnum Amex = new CardTypeEnum(1, "American Express", nameof(Amex));
+        public static readonly CardTypeEnum Amex = new (1, "American Express", nameof(Amex));
 
         /// <summary>
         /// Tarjeta American Visa.
         /// <para><strong>Visa</strong> = 2.</para>
         /// </summary>
-        public static readonly CardTypeEnum Visa = new CardTypeEnum(2, nameof(Visa), nameof(Visa));
+        public static readonly CardTypeEnum Visa = new (2, nameof(Visa), nameof(Visa));
 
         /// <summary>
         /// Tarjeta Master Card.
         /// <para><strong>MasterCard</strong> = 3.</para>
         /// </summary>
-        public static readonly CardTypeEnum MasterCard = new CardTypeEnum(3, "Master Card", nameof(MasterCard));
+        public static readonly CardTypeEnum MasterCard = new (3, "Master Card", nameof(MasterCard));
 
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="CardTypeEnum"/>.

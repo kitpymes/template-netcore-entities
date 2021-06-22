@@ -37,13 +37,13 @@ namespace Kitpymes.Core.Entities
         /// Estado inactivo.
         /// <para><strong>Inactive</strong> = 0.</para>
         /// </summary>
-        public static readonly StatusEnum Inactive = new StatusEnum(0, nameof(Inactive));
+        public static readonly StatusEnum Inactive = new (0, nameof(Inactive));
 
         /// <summary>
         /// Estado activo.
         /// <para><strong>Active</strong> = 1.</para>
         /// </summary>
-        public static readonly StatusEnum Active = new StatusEnum(1, nameof(Active));
+        public static readonly StatusEnum Active = new (1, nameof(Active));
 
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="StatusEnum"/>.

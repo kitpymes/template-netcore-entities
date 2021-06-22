@@ -35,13 +35,13 @@ namespace Kitpymes.Core.Entities
         /// Sexo masculino.
         /// <para><strong>Male</strong> = 1.</para>
         /// </summary>
-        public static readonly GenderTypeEnum Male = new GenderTypeEnum(1, nameof(Male), "M");
+        public static readonly GenderTypeEnum Male = new (1, nameof(Male), "M");
 
         /// <summary>
         /// Sexo femenino.
         /// <para><strong>Female</strong> = 2.</para>
         /// </summary>
-        public static readonly GenderTypeEnum Female = new GenderTypeEnum(2, nameof(Female), "F");
+        public static readonly GenderTypeEnum Female = new (2, nameof(Female), "F");
 
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="GenderTypeEnum"/>.

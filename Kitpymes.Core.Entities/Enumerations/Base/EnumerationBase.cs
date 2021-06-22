@@ -103,9 +103,7 @@ namespace Kitpymes.Core.Entities
         /// <param name="value">Valor de una enumeración.</param>
         /// <returns>TEnum.</returns>
 #pragma warning disable CA1000 // No declarar miembros estáticos en tipos genéricos
-#pragma warning disable SA1204 // Static elements should appear before instance elements
-        public static TEnum ToEnum(TValue value)
-#pragma warning restore SA1204 // Static elements should appear before instance elements
+        public static TEnum? ToEnum(TValue value)
 #pragma warning restore CA1000 // No declarar miembros estáticos en tipos genéricos
         => GetAll().FirstOrDefault(x => x.Value.Equals(value));
 
@@ -115,9 +113,7 @@ namespace Kitpymes.Core.Entities
         /// <param name="name">Nombre de una enumeración.</param>
         /// <returns>TEnum.</returns>
 #pragma warning disable CA1000 // No declarar miembros estáticos en tipos genéricos
-#pragma warning disable SA1204 // Static elements should appear before instance elements
-        public static TEnum ToEnum(string? name)
-#pragma warning restore SA1204 // Static elements should appear before instance elements
+        public static TEnum? ToEnum(string? name)
 #pragma warning restore CA1000 // No declarar miembros estáticos en tipos genéricos
         => GetAll().FirstOrDefault(x => x.Name == name || x.ShortName == name);
 

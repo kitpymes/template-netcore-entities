@@ -39,19 +39,19 @@ namespace Kitpymes.Core.Entities
         /// Subscripción gratis.
         /// <para><strong>Free</strong> = 1.</para>
         /// </summary>
-        public static readonly SubscriptionEnum Free = new SubscriptionEnum(1, nameof(Free));
+        public static readonly SubscriptionEnum Free = new (1, nameof(Free));
 
         /// <summary>
         /// Subscripción plata.
         /// <para><strong>Silver</strong> = 2.</para>
         /// </summary>
-        public static readonly SubscriptionEnum Silver = new SubscriptionEnum(2, nameof(Silver));
+        public static readonly SubscriptionEnum Silver = new (2, nameof(Silver));
 
         /// <summary>
         /// Subscripción oro.
         /// <para><strong>Gold</strong> = 3.</para>
         /// </summary>
-        public static readonly SubscriptionEnum Gold = new SubscriptionEnum(3, nameof(Gold));
+        public static readonly SubscriptionEnum Gold = new (3, nameof(Gold));
 
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="SubscriptionEnum"/>.

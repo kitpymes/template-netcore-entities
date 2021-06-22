@@ -18,6 +18,11 @@ namespace Kitpymes.Core.Entities
         public static string? Key { get; set; }
 
         /// <summary>
+        /// Obtiene o establece si es ambiente de desarrollo.
+        /// </summary>
+        public static bool? IsDevelopment { get; set; }
+
+        /// <summary>
         /// Obtiene o establece el tenant.
         /// </summary>
         public static TenantSession? Tenant { get; set; }
@@ -26,10 +31,5 @@ namespace Kitpymes.Core.Entities
         /// Obtiene o establece el usuario.
         /// </summary>
         public static UserSession? User { get; set; }
-
-        /// <summary>
-        /// Obtiene o establece si es ambiente de desarrollo.
-        /// </summary>
-        public static bool? IsDevelopment { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace Kitpymes.Core.Entities.ValueObjects.Tests
     {
         private static CultureInfo GetCultureInfo(Currency.CodeName code)
         => CultureInfo.GetCultures(CultureTypes.SpecificCultures)
-            .FirstOrDefault(culture => new RegionInfo(culture.LCID).ISOCurrencySymbol == code.ToString());
+            .First(culture => new RegionInfo(culture.LCID).ISOCurrencySymbol == code.ToString());
 
         #region Create
 

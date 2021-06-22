@@ -11,13 +11,13 @@
 
 ## 📋 Requerimientos 
 
-* Visual Studio >= 2019 (v16.3)
+* Visual Studio >= 2019
 
-* NET TargetFramework >= netcoreapp3.0
+* NET TargetFramework >= net5.0
 
-* Net Core SDK >= 3.0.100
+* Net Core SDK >= 5.0.100
 
-* C# >= 8.0
+* C# >= 9.0
 
 * Conocimientos sobre Inyección de Dependencias
 
@@ -113,9 +113,9 @@ public abstract class EnumerationBase<TEnum, TValue> : INotMapped
 
         public static List<TEnum> GetAll() {}
 
-        public static TEnum ToEnum(TValue value) {}
+        public static TEnum? ToEnum(TValue value) {}
 
-        public static TEnum ToEnum(string? name) {}
+        public static TEnum? ToEnum(string? name) {}
 
         public override bool Equals(object? obj) {}
 
