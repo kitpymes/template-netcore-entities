@@ -17,20 +17,25 @@ namespace Kitpymes.Core.Entities
     {
         private FullName() { }
 
-        private FullName(string firstName, string lastName, string? middleName = null)
+        private FullName(string firstName, string? lastName, string? middleName = null)
         {
-            ChangeFirstName(firstName).ChangeLastName(lastName);
+            ChangeFirstName(firstName);
 
             if (!middleName.ToIsNullOrEmpty())
             {
                 ChangeMiddleName(middleName);
+            }
+
+            if (!middleName.ToIsNullOrEmpty())
+            {
+                ChangeLastName(lastName);
             }
         }
 
         /// <summary>
         /// Obtiene un nombre vacio.
         /// </summary>
-        public static FullName Null => new FullName();
+        public static FullName Null => new ();
 
         /// <summary>
         /// Obtiene un valor que indica si el nombre esta vacio.
@@ -60,8 +65,8 @@ namespace Kitpymes.Core.Entities
         /// <param name="middleName">Apellido.</param>
         /// <returns>FullName | ApplicationException.</returns>
         [return: NotNull]
-        public static FullName Create(string firstName, string lastName, string? middleName = null)
-        => new FullName(firstName, lastName, middleName);
+        public static FullName Create(string firstName, string? lastName = null, string? middleName = null)
+        => new (firstName, lastName, middleName);
 
         /// <summary>
         /// Modifica el primer nombre.
