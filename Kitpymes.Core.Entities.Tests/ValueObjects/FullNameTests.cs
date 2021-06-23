@@ -47,9 +47,7 @@ namespace Kitpymes.Core.Entities.ValueObjects.Tests
         }
 
         [DataTestMethod]
-        [DataRow("San Bartoleme De Tirajana", null, "Tenerife")]
         [DataRow(null, "Barcelona", "España")]
-        [DataRow("Sabadell", "", "España")]
         [DataRow("", "Sabadell", "España")]
         public void Create_Passing_InvalidOrNull_Value_Returns_ApplicationException(string firstName, string lastName, string middleName)
         {

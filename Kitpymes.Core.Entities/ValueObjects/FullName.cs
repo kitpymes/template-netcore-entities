@@ -26,7 +26,7 @@ namespace Kitpymes.Core.Entities
                 ChangeMiddleName(middleName);
             }
 
-            if (!middleName.ToIsNullOrEmpty())
+            if (!lastName.ToIsNullOrEmpty())
             {
                 ChangeLastName(lastName);
             }
