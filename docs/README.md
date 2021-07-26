@@ -318,6 +318,13 @@ public interface ITenant
 }
 ```
 
+```cs
+public interface IDefault
+{
+    public const string IsDefault = nameof(IsDefault);
+}
+```
+
 ### ValueObjects
 
 ```cs
@@ -616,7 +623,7 @@ public sealed class FullName : ValueObjectBase
     public string? LastName { get; }
 
     [return: NotNull]
-    public static FullName Create(string firstName, string lastName, string? middleName = null) {}
+    public static FullName Create(string? firstName, string lastName, string? middleName = null) {}
 
     [return: NotNull]
     public FullName ChangeFirstName(string? firstName) {}
@@ -736,6 +743,24 @@ public sealed class Telephone : ValueObjectBase
 
     [return: NotNull]
     public Telephone ChangeNumber(long number) {}
+
+    public override string ToString() {}
+}
+```
+
+```cs
+public sealed class TenantName : ValueObjectBase
+{
+    public static TenantName Null { get; }
+
+    public bool IsNull { get; }
+
+    public string? Value { get; }
+
+    [return: NotNull]
+    public static TenantName Create(string? name) {}
+
+    public void Change(string? name) {}
 
     public override string ToString() {}
 }

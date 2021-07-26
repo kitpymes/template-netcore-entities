@@ -17,7 +17,7 @@ namespace Kitpymes.Core.Entities
     {
         private FullName() { }
 
-        private FullName(string firstName, string? lastName, string? middleName = null)
+        private FullName(string? firstName, string? lastName, string? middleName = null)
         {
             ChangeFirstName(firstName);
 
@@ -65,7 +65,7 @@ namespace Kitpymes.Core.Entities
         /// <param name="middleName">Apellido.</param>
         /// <returns>FullName | ApplicationException.</returns>
         [return: NotNull]
-        public static FullName Create(string firstName, string? lastName = null, string? middleName = null)
+        public static FullName Create(string? firstName, string? lastName = null, string? middleName = null)
         => new (firstName, lastName, middleName);
 
         /// <summary>
