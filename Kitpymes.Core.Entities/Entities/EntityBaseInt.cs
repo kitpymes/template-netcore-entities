@@ -15,6 +15,11 @@ namespace Kitpymes.Core.Entities
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="EntityBaseInt"/>.
         /// </summary>
+        protected EntityBaseInt() { }
+
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase <see cref="EntityBaseInt"/>.
+        /// </summary>
         /// <param name="id">Clave para la entidad.</param>
         protected EntityBaseInt(int id)
             : base(id) { }

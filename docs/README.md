@@ -48,6 +48,8 @@ public interface IEntityBase { }
 ```cs
 public abstract class EntityBase<TKey> : IEquatable<TKey>, IEntityBase
 {
+    protected EntityBase() { }
+
     protected EntityBase(TKey key) {}
 
     public virtual TKey Id { get; private set; }
@@ -67,6 +69,8 @@ public abstract class EntityBase<TKey> : IEquatable<TKey>, IEntityBase
 ```cs
 public abstract class EntityBaseInt : EntityBase<int>
 {
+    protected EntityBaseInt() { }
+
     protected EntityBaseInt(int id)
         : base(id) { }
 }
@@ -75,6 +79,8 @@ public abstract class EntityBaseInt : EntityBase<int>
 ```cs
 public abstract class EntityBaseLong : EntityBase<long>
 {
+    protected EntityBaseLong() { }
+
     protected EntityBaseLong(long id)
         : base(id) { }
 }
@@ -293,7 +299,7 @@ public interface IEntityFullAudited : ICreationAudited, IModificationAudited, ID
 ```cs
 public interface INotMapped
 {
-    public const string NotMapped = nameof(NotMapped);
+    public const string IsNotMapped = nameof(IsNotMapped);
 }
 ```
 
@@ -305,9 +311,9 @@ public interface IRowVersion
 ```
 
 ```cs
-public interface IStatus
+public interface IActive
 {
-    public const string Status = nameof(Status);
+    public const string IsActive = nameof(IsActive);
 }
 ```
 

@@ -8,13 +8,13 @@
 namespace Kitpymes.Core.Entities
 {
     /// <summary>
-    /// Estado de propiedad para entidades.
+    /// Estado de una entidad para determinar si fue eliminada lógicamente.
     /// </summary>
-    public interface IStatus
+    public interface IDelete
     {
         /// <summary>
         /// Estado de una propiedad.
         /// </summary>
-        public const string Status = nameof(Status);
+        public const string IsDelete = nameof(IsDelete);
     }
 }

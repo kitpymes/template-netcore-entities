@@ -8,7 +8,7 @@
 namespace Kitpymes.Core.Entities
 {
     /// <summary>
-    /// Propiedad por defecto.
+    /// Estado de una entidad para determinar si se usa como por defecto.
     /// </summary>
     public interface IDefault
     {

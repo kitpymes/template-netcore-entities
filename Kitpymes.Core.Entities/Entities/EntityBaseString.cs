@@ -27,7 +27,7 @@ namespace Kitpymes.Core.Entities
         /// Crea una clave custom.
         /// </summary>
         /// <param name="id">Clave para la entidad.</param>
-        protected EntityBaseString(string? id)
-           : base(id.ToIsNullOrEmptyThrow(nameof(id))) { }
+        protected EntityBaseString(string id)
+           : base(id) { }
     }
 }

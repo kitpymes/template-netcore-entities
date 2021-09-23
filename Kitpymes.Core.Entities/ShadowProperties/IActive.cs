@@ -1,5 +1,5 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="INotMapped.cs" company="Kitpymes">
+// -----------------------------------------------------------------------
+// <copyright file="IActive.cs" company="Kitpymes">
 // Copyright (c) Kitpymes. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project docs folder for full license information.
 // </copyright>
@@ -8,13 +8,13 @@
 namespace Kitpymes.Core.Entities
 {
     /// <summary>
-    /// Propiedad para entidades que no queremos mapear a la base de datos.
+    /// Estado de una entidad para determinar si se encuentra activa.
     /// </summary>
-    public interface INotMapped
+    public interface IActive
     {
         /// <summary>
-        /// Propiedad de seguimiento.
+        /// Estado de una propiedad.
         /// </summary>
-        public const string IsNotMapped = nameof(IsNotMapped);
+        public const string IsActive = nameof(IsActive);
     }
 }

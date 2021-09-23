@@ -20,6 +20,13 @@ namespace Kitpymes.Core.Entities
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="EntityBase{TKey}"/>.
         /// </summary>
+#pragma warning disable CS8618 // Un campo que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de declararlo como que admite un valor NULL.
+        protected EntityBase() { }
+#pragma warning restore CS8618 // Un campo que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de declararlo como que admite un valor NULL.
+
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase <see cref="EntityBase{TKey}"/>.
+        /// </summary>
         /// <param name="key">Clave única de una entidad.</param>
         protected EntityBase(TKey key) => Id = key.ToIsNullOrEmptyThrow(nameof(key));
 

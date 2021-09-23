@@ -1,7 +1,11 @@
+# v.1.0.6
+- Se actualizan Entities.
+- Se actualizan ShadowProperties.
+
 # v.1.0.5
 - Se agrega el nuevo ValueObjects "TenantName".
 - Se actualiza el ValueObjects "FullName".
-- Se agrega la nueva ShadowPrperty "IDefault".
+- Se agrega la nueva ShadowProperties "IDefault".
 
 # v.1.0.4
 - Se actualizan los Value Objects.
