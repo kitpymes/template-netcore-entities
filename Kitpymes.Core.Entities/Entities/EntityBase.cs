@@ -31,9 +31,9 @@ namespace Kitpymes.Core.Entities
         protected EntityBase(TKey key) => Id = key.ToIsNullOrEmptyThrow(nameof(key));
 
         /// <summary>
-        /// Obtiene la clave de la entidad.
+        /// Obtiene o establece la clave de la entidad.
         /// </summary>
-        public virtual TKey Id { get; private set; }
+        public virtual TKey Id { get; protected set; }
 
         #region Equals
 

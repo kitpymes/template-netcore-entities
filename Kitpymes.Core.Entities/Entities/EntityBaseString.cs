@@ -7,27 +7,24 @@
 
 namespace Kitpymes.Core.Entities
 {
-    using System;
-    using Kitpymes.Core.Shared;
-
     /// <summary>
-    /// Entidad base para cadenas.
+    /// Entidad base para is de tipo string.
     /// </summary>
-    public abstract class EntityBaseString : EntityBase<string>
+    public abstract class EntityBaseString : EntityBase<StringId>
     {
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="EntityBaseString"/>.
         /// Crea una clave automática.
         /// </summary>
         protected EntityBaseString()
-            : this(Guid.NewGuid().ToString("N", System.Globalization.CultureInfo.CurrentCulture)) { }
+            : this(StringId.Create()) { }
 
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="EntityBaseString"/>.
         /// Crea una clave custom.
         /// </summary>
         /// <param name="id">Clave para la entidad.</param>
-        protected EntityBaseString(string id)
+        protected EntityBaseString(StringId id)
            : base(id) { }
     }
 }

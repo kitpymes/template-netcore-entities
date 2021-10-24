@@ -4,7 +4,11 @@
   <Import Project="$(SolutionDir)docs/props/Pack.Build.props" Condition="Exists('$(SolutionDir)docs/props/Pack.Build.props')" />
   
   <ItemGroup>
-    <PackageReference Include="Kitpymes.Core.Shared" Version="1.2.2" />
+    <PackageReference Include="Kitpymes.Core.Shared" Version="1.2.3" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Update="Microsoft.VisualStudio.Threading.Analyzers" Version="17.0.63" />
   </ItemGroup>
 
 </Project>

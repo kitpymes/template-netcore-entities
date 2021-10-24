@@ -8,7 +8,7 @@
 namespace Kitpymes.Core.Entities
 {
     /// <summary>
-    /// Entidad base para enteros.
+    /// Entidad base para is de tipo int.
     /// </summary>
     public abstract class EntityBaseInt : EntityBase<int>
     {

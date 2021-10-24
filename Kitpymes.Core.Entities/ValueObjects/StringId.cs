@@ -23,7 +23,7 @@ namespace Kitpymes.Core.Entities
         /// <summary>
         /// Obtiene el id vacio.
         /// </summary>
-        public static StringId Null => new StringId();
+        public static StringId Null => new ();
 
         /// <summary>
         /// Obtiene un valor que indica si el id esta vacio.
@@ -48,7 +48,7 @@ namespace Kitpymes.Core.Entities
         /// <param name="id">Nuevo id.</param>
         /// <returns>StringId | ApplicationException.</returns>
         [return: NotNull]
-        public static StringId Create(string? id) => new StringId(id);
+        public static StringId Create(string? id) => new (id);
 
         /// <summary>
         /// Devuelve el id.
