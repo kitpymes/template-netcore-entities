@@ -1,4 +1,4 @@
-﻿// -----------------------------------------------------------------------
+﻿// -------------------------------------------------IsRowVersion----------------------
 // <copyright file="IRowVersion.cs" company="Kitpymes">
 // Copyright (c) Kitpymes. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project docs folder for full license information.
@@ -15,6 +15,6 @@ namespace Kitpymes.Core.Entities
         /// <summary>
         /// Propiedad de seguimiento.
         /// </summary>
-        public const string IsRowVersion = nameof(IsRowVersion);
+        public const string RowVersion = nameof(RowVersion);
     }
 }

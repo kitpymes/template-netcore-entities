@@ -12,26 +12,26 @@ namespace Kitpymes.Core.Entities
     /// <summary>
     /// Propiedades de la sesión del usuario.
     /// </summary>
-    public class UserSession
+    public class UserSession<TId>
     {
         /// <summary>
         /// Obtiene o establece el id.
         /// </summary>
-        public string? Id { get; set; }
+        public TId Id { get; set; } = default!;
 
         /// <summary>
         /// Obtiene o establece el email.
         /// </summary>
-        public string? Email { get; set; }
+        public string Email { get; set; } = default!;
 
         /// <summary>
         /// Obtiene o establece el rol.
         /// </summary>
-        public string? Role { get; set; }
+        public string Role { get; set; } = default!;
 
         /// <summary>
         /// Obtiene o establece los permisos.
         /// </summary>
-        public IEnumerable<string>? Permissions { get; set; }
+        public IEnumerable<string> Permissions { get; set; } = default!;
     }
 }

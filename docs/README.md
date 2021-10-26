@@ -223,39 +223,26 @@ public class SubscriptionEnum : EnumerationBaseInt<SubscriptionEnum>
 ### Session
 
 ```cs
-public static class AppSession
+public class TenantSession<TId>
 {
-    public static string? Key { get; set; }
+    public bool Enabled { get; set; }
 
-    public static TenantSession? Tenant { get; set; }
+    public TId Id { get; set; }
 
-    public static UserSession? User { get; set; }
-
-    public static bool? IsDevelopment { get; set; }
+    public string Subdomain { get; set; }
 }
 ```
 
 ```cs
-public class TenantSession
+public class UserSession<TId>
 {
-    public bool? Enabled { get; set; }
+    public TId Id { get; set; }
 
-    public string? Id { get; set; }
+    public string Email { get; set; }
 
-    public string? Subdomain { get; set; }
-}
-```
+    public string Role { get; set; }
 
-```cs
-public class UserSession
-{
-    public string? Id { get; set; }
-
-    public string? Email { get; set; }
-
-    public string? Role { get; set; }
-
-    public IEnumerable<string>? Permissions { get; set; }
+    public IEnumerable<string> Permissions { get; set; }
 }
 ```
 
@@ -306,7 +293,7 @@ public interface INotMapped
 ```cs
 public interface IRowVersion
 {
-    public const string IsRowVersion = nameof(IsRowVersion);
+    public const string RowVersion = nameof(RowVersion);
 }
 ```
 

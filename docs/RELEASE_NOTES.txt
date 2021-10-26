@@ -1,3 +1,7 @@
+# v.1.0.8
+- Se elimina la clase "AppSession" creemos que debe ser configurado por la app.
+- Se actualizan las clases "UserSession" y "TenantSession" para que reciban el tipo de id.
+
 # v.1.0.7
 - Se agrega la nueva Entities "EntityBaseGuid" para los id de tipo Guid.
 - Se agrega la nueva Entities "EntityBaseGuidSequencial" para los id de tipo Guid secuenciales.
