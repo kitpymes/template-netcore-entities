@@ -12,7 +12,7 @@ namespace Kitpymes.Core.Entities
     /// <summary>
     /// Propiedades de la sesión del usuario.
     /// </summary>
-    public class UserSession<TId>
+    public abstract class UserSession<TId>
     {
         /// <summary>
         /// Obtiene o establece el id.

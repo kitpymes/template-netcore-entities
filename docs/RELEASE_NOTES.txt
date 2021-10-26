@@ -1,3 +1,6 @@
+# v.1.0.9
+- Se actualizan las clases "UserSession" y "TenantSession" para hacerlas abstractas.
+
 # v.1.0.8
 - Se elimina la clase "AppSession" creemos que debe ser configurado por la app.
 - Se actualizan las clases "UserSession" y "TenantSession" para que reciban el tipo de id.

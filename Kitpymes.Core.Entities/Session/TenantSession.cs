@@ -10,7 +10,7 @@ namespace Kitpymes.Core.Entities
     /// <summary>
     /// Propiedades de la sesión del inquilino.
     /// </summary>
-    public class TenantSession<TId>
+    public abstract class TenantSession<TId>
     {
         /// <summary>
         /// Obtiene o establece un valor que indica si esta habilitado el uso de inquilinos.

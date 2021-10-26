@@ -223,7 +223,7 @@ public class SubscriptionEnum : EnumerationBaseInt<SubscriptionEnum>
 ### Session
 
 ```cs
-public class TenantSession<TId>
+public abstract class TenantSession<TId>
 {
     public bool Enabled { get; set; }
 
@@ -234,7 +234,7 @@ public class TenantSession<TId>
 ```
 
 ```cs
-public class UserSession<TId>
+public abstract class UserSession<TId>
 {
     public TId Id { get; set; }
 
