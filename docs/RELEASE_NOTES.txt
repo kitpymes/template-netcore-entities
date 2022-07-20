@@ -1,3 +1,6 @@
+# v.1.1.0
+- Se agregan las propiedades de sombra "IStatic" y "INotVisible".
+
 # v.1.0.9
 - Se actualizan las clases "UserSession" y "TenantSession" para hacerlas abstractas.
 

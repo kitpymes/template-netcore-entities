@@ -318,6 +318,20 @@ public interface IDefault
 }
 ```
 
+```cs
+public interface IStatic
+{
+    public const string IsStatic = nameof(IsStatic);
+}
+```
+
+```cs
+public interface INotVisible
+{
+    public const string IsNotVisible = nameof(IsNotVisible);
+}
+```
+
 ### ValueObjects
 
 ```cs
